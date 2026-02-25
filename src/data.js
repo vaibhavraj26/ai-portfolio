@@ -91,6 +91,26 @@ export const projects = [
     category: "Full Stack",
     liveUrl: "https://thememelab.vercel.app/",
     githubUrl: "https://github.com/Vaibhav5860/meme-lab",
+  },
+  {
+    id: "03",
+    title: "projectHub - project management tool",
+    period: "February’26 – March’26",
+    description: "A project management tool for teams to collaborate and track progress.",
+    detailDescription: "ProjectHub is a comprehensive project management tool designed to facilitate team collaboration and progress tracking. The platform offers features such as task assignment, progress visualization, and real-time updates, enabling teams to manage their projects efficiently. Built with the MERN stack, ProjectHub demonstrates proficiency in both frontend and backend development, with a focus on user experience and performance optimization.",
+    points: [
+      "Implemented task management features, allowing users to create, assign, and track tasks and projects with real-time updates.",
+      "Designed a responsive user interface using React.js, ensuring seamless access across various devices and screen sizes.",
+      "Optimized backend performance with Node.js and Express.js, handling API requests and data processing efficiently.",
+      "Integrated MongoDB (atlas) for robust data storage and retrieval, ensuring scalability and reliability of the application.",
+      "Incorporated real-time collaboration features using Socket.io, enabling team members to communicate and update project status dynamically.",
+    ],
+    techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.io"],
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Full Stack",
+    liveUrl: "https://project-hub-web.vercel.app/",
+    githubUrl: "https://github.com/Vaibhav5860/projectHub",
+    
   }
 ];
 
