@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personalInfo } from '../personalData';
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Work', href: 'projects' },
-    { name: 'Services', href: 'services' },
+    { name: 'About', href: 'credentials' },
     { name: 'Contact', href: 'contact' },
     { name: 'Resume', href: '/VaibhavRaj.pdf', isExternal: true },
   ];
@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav
+      <Motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -94,12 +94,12 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </Motion.nav>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
@@ -138,7 +138,7 @@ const Navbar = () => {
                 <a href={`mailto:${personalInfo.email}`} className="text-gray-400 hover:text-white"><Mail size={24} /></a>
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
     </>

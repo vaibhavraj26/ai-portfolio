@@ -6,10 +6,12 @@ import Skills from './components/Skills';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Process from './components/Process';
+import CredentialsPreview from './components/CredentialsPreview';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 import ProjectDetails from './components/ProjectDetails';
+import Profile from './components/Profile';
 import ScrollIndicator from './components/ScrollIndicator';
 import ServiceUnavailable from './components/ServiceUnavailable';
 
@@ -33,6 +35,7 @@ function Home() {
         <Services />
         <Projects />
         <Process />
+        <CredentialsPreview />
         <Contact />
       </main>
       <Footer />
@@ -50,6 +53,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/unavailable" element={<ServiceUnavailable />} />
         </Routes>
       </div>

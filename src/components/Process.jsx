@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const steps = [
   {
@@ -52,9 +52,9 @@ const Process = () => {
   };
 
   return (
-    <section id="process" className="py-32 relative">
+    <section id="process" className="pt-36 relative">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-16">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -64,17 +64,17 @@ const Process = () => {
             Process
           </h2>
           <div className="h-[1px] w-full bg-white/10"></div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
         >
-          {steps.map((step, index) => (
-            <motion.div
+          {steps.map((step) => (
+            <Motion.div
               key={step.id}
               variants={item}
               className="relative group"
@@ -89,9 +89,9 @@ const Process = () => {
                   {step.description}
                 </p>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

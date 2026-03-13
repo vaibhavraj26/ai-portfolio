@@ -70,7 +70,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-32 relative">
+    <section id="projects" className="pt-36 relative">
 
       <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
         <motion.div

@@ -54,7 +54,7 @@ const techShowcase = [
   { name: 'Bootstrap',    icon: SiBootstrap,     color: '#7952B3' },
   // Frameworks & Libraries
   { name: 'React',        icon: FaReact,         color: '#61DAFB' },
-  { name: 'Next.js',      icon: SiNextdotjs,     color: '#ffffff' },
+  // { name: 'Next.js',      icon: SiNextdotjs,     color: '#ffffff' },
   { name: 'Redux',        icon: SiRedux,         color: '#764ABC' },
   { name: 'Tailwind',     icon: SiTailwindcss,   color: '#06B6D4' },
   { name: 'Node.js',      icon: FaNodeJs,        color: '#339933' },
@@ -67,7 +67,7 @@ const techShowcase = [
   // Tools & Platforms
   { name: 'Git',          icon: FaGitAlt,        color: '#F05032' },
   { name: 'GitHub',       icon: FaGithub,        color: '#ffffff' },
-  { name: 'Docker',       icon: SiDocker,        color: '#2496ED' },
+  // { name: 'Docker',       icon: SiDocker,        color: '#2496ED' },
   { name: 'Vite',         icon: SiVite,          color: '#646CFF' },
   { name: 'npm',          icon: FaNpm,           color: '#CB3837' },
   { name: 'Postman',      icon: SiPostman,       color: '#FF6C37' },
@@ -128,13 +128,13 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-32 relative">
+    <section id="skills" className="pt-36 relative">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-16">
         <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
             My Skills

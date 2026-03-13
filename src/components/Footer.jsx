@@ -1,7 +1,7 @@
 //seen
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { personalInfo } from '../personalData';
@@ -11,20 +11,21 @@ import { Link } from 'react-router-dom';
 const isInternalLink = (url) => url && url.startsWith('/');
 
 // Reusable component for social links
-const SocialLink = ({ href, icon: Icon, children }) => {
+const SocialLink = ({ href, icon, children }) => {
+  const IconComponent = icon;
   const className = "text-white hover:text-gray-300 transition-colors flex items-center gap-2 group";
   
   if (isInternalLink(href)) {
     return (
       <Link to={href} className={className}>
-        <Icon size={16} /> {children} <ArrowUpRight size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+        <IconComponent size={16} /> {children} <ArrowUpRight size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
       </Link>
     );
   }
   
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-      <Icon size={16} /> {children} <ArrowUpRight size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+      <IconComponent size={16} /> {children} <ArrowUpRight size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
     </a>
   );
 };
@@ -36,7 +37,7 @@ const Footer = () => {
       <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -47,9 +48,9 @@ const Footer = () => {
             <p className="text-gray-400 text-xl max-w-md font-light">
               Crafting digital experiences that leave a lasting impression.
             </p>
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,7 +67,7 @@ const Footer = () => {
 
               <SocialLink href={personalInfo.instagram} icon={FaInstagram}>Instagram</SocialLink>
             </div>
-          </motion.div>
+          </Motion.div>
 
         </div>
 

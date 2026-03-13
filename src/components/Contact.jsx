@@ -1,7 +1,7 @@
 //seen
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Mail, Loader2 } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { personalInfo } from '../personalData';
@@ -86,10 +86,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative">
+    <section id="contact" className="py-36 relative">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -102,7 +102,7 @@ const Contact = () => {
               Currently available for freelance projects and open to full-time opportunities.
             </p>
 
-            <motion.div
+            <Motion.div
               variants={container}
               initial="hidden"
               whileInView="visible"
@@ -119,13 +119,13 @@ const Contact = () => {
                 const className = "w-14 h-14 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300";
 
                 return isInternalLink(social.href) ? (
-                  <motion.div key={index} variants={item}>
+                  <Motion.div key={index} variants={item}>
                     <Link to={social.href} className={className}>
                       <social.icon size={20} />
                     </Link>
-                  </motion.div>
+                  </Motion.div>
                 ) : (
-                  <motion.a
+                  <Motion.a
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -134,13 +134,13 @@ const Contact = () => {
                     className={className}
                   >
                     <social.icon size={20} />
-                  </motion.a>
+                  </Motion.a>
                 );
               })}
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
 
-          <motion.form
+          <Motion.form
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -210,7 +210,7 @@ const Contact = () => {
               )}
             </button>
 
-          </motion.form>
+          </Motion.form>
 
           <Toaster
             position="bottom-right"

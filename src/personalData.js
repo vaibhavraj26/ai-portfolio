@@ -68,63 +68,85 @@ export const certificates = [
     issuer: "NPTEL IIT Kharagpur",
     date: "Apr’25",
     image: "/unavailable",
+    link: "/unavailable",
   },
   {
     name: "Object-Oriented Programming",
     issuer: "Neocolab",
     date: "Jan’25",
     image: "/unavailable",
+    link: "/unavailable",
   },
   {
     name: "Data Structures and Algorithms",
     issuer: "Neocolab",
     date: "Jan’25",
     image: "/unavailable",
+    link: "/unavailable",
   },
   {
     name: "Web Development",
     issuer: "Rising Tech Pro",
     date: "Mar’24",
     image: "/unavailable",
+    link: "/unavailable",
   },
   {
     name: "Python-3 Bootcamp",
     issuer: "Udemy",
     date: "Feb’24",
     image: "/unavailable",
+    link: "/unavailable",
   },
   {
     name: "Legacy Responsive Web Design",
     issuer: "FreeCodeCamp",
     date: "Nov’23",
     image: "/unavailable",
+    link: "/unavailable",
   },
 ];
+
+export const featuredCertificates = certificates.filter((certificate) => (
+  certificate.name === 'Web Development' ||
+  certificate.name === 'Data Structures and Algorithms'
+));
 
 export const education = [
   {
     institution: "Lovely Professional University, Punjab, India",
     degree: "B. Tech in Computer Science and Engineering",
     period: "Aug’23 – 27",
-    details: "CGPA: 7.51",
+    // details: "CGPA: 7.51",
   },
   {
     institution: "Sher Shah collage, Sasaram, India",
     degree: "Intermediate",
     period: "Apr’20 – Mar’22",
-    details: "Percentage: 74%",
+    // details: "Percentage: 74%",
   },
   {
     institution: "D.A.V. Public School, Sasaram, India",
     degree: "Matriculation",
     period: "Apr’19 – Mar’20",
-    details: "Percentage: 83%",
+    // details: "Percentage: 83%",
   },
 ];
 
-export const achievements = [
+export const highlights = [
   {
-    title: "",
-    description: "",
+    metric: "10+",
+    title: "Portfolio projects",
+    description: "Built full-stack and realtime products across education, collaboration, entertainment, random video chat and more, showcasing a range of skills and technologies.",
+  },
+  {
+    metric: "MERN",
+    title: "Core stack focus",
+    description: "Hands-on with React, Node.js, Express, MongoDB, plus realtime tooling like Socket.io and WebRTC. Passionate about building dynamic, interactive web applications.",
+  },
+  {
+    metric: "06+",
+    title: "Certifications earned",
+    description: "Continuous learning across web development, data structures, object-oriented programming, Python, and IoT.",
   },
 ];
