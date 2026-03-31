@@ -1,104 +1,161 @@
-# Vaibhav Raj Portfolio
+<div align="center">
 
-A modern React + Vite portfolio showcasing projects, skills, services, and contact information. The site includes an AI assistant widget with contextual responses powered by portfolio data.
+# ✨ Vaibhav Raj - Personal Portfolio
 
-Live site: https://vaibhav5860.vercel.app
+A modern, responsive personal portfolio website showcasing my projects, skills, services, and an integrated AI assistant.
 
-## Overview
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23-FF0080?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-This portfolio is built as a single-page experience with animated sections and project detail routing. It combines:
+[Live Demo](https://vaibhav5860.vercel.app) • [Report Bug](https://github.com/vaibhav5860/portfolio/issues) • [Request Feature](https://github.com/vaibhav5860/portfolio/issues)
 
-- Interactive UI with Framer Motion
-- Structured personal/project data in local data files
-- EmailJS-powered contact form
-- API-backed AI chat assistant with multi-provider fallback
-- Responsive layout across desktop and mobile
+</div>
 
-## Key Features
+---
 
-- Hero, skills, services, process, projects, and contact sections
-- Project detail pages using route-based navigation
-- Work section CTA button: View All Projects On GitHub
-- Floating AI Agent chat widget with:
-  - quick command hints
-  - conversation history handoff
-  - graceful fallback when model providers are unavailable
-- Contact form integration with EmailJS
-- Social links (GitHub, LinkedIn, X/Twitter, Instagram, email, phone)
+## 🎯 Overview
 
-## Tech Stack
+This portfolio features a sleek dark visual style, glassmorphism-inspired UI elements, smooth motion transitions, route-based project detail pages, and a floating AI chat widget. It is built with React 19 and modern frontend tooling for performance and maintainability.
 
-- React 19
-- Vite 7
-- React Router DOM 7
-- Framer Motion
-- Tailwind CSS 4 + PostCSS
-- Lucide React + React Icons
-- EmailJS
-- ESLint 9
+---
 
-## Project Structure
+## 🖼️ Profile Preview
+
+| Landing Section | Portfolio Layout |
+| :---: | :---: |
+| ![Landing Section](src/assets/screenshot/Screenshot%202026-03-28%20024120.png) | ![Portfolio Layout](src/assets/screenshot/Screenshot%202026-03-28%20024132.png) |
+
+<div align="center">
+
+### ⚡ Key Highlights
+
+|  |  |  |
+| :---: | :---: | :---: |
+| 🌙 **Dark Theme** | 🎨 **Glassmorphism UI** | 🖱️ **Custom Cursor** |
+| 📱 **Responsive Layout** | ⚡ **Fast Vite Build** | 🎬 **Motion Animations** |
+| 🤖 **AI Agent Chat** | 📧 **EmailJS Contact Form** | 🧭 **Project Detail Routes** |
+
+</div>
+
+---
+
+## 🚀 Features
+
+- **Modern Portfolio UI** - Clean dark design with animated sections and polished interactions
+- **AI Agent Widget** - Floating chatbot with quick command hints and contextual responses
+- **Smart Fallback UX** - If AI service is unavailable, bot suggests direct contact paths
+- **Project Showcase** - Work cards with detail pages plus a "View All Projects On GitHub" CTA
+- **Contact System** - Functional contact form integrated with EmailJS
+- **Responsive by Default** - Optimized across mobile, tablet, and desktop
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Category | Technologies |
+| :---: | :--- |
+| **Frontend** | React 19, React Router DOM 7 |
+| **Styling** | Tailwind CSS 4, Custom CSS, PostCSS |
+| **Animations** | Framer Motion 12 |
+| **Icons** | Lucide React, React Icons |
+| **Build Tool** | Vite 7 |
+| **Contact** | EmailJS Browser SDK |
+| **Linting** | ESLint 9 |
+
+</div>
+
+---
+
+## 📁 Project Structure
 
 ```text
 portfolio/
-|- api/
-|  |- chat.js                      # AI chat API handler (provider fallback + retrieval fallback)
-|- public/
-|- src/
-|  |- components/
-|  |  |- BotWidget.jsx             # Floating AI assistant UI
-|  |  |- Projects.jsx              # Work section + GitHub CTA
-|  |  |- ProjectDetails.jsx
-|  |  |- Contact.jsx
-|  |  |- Hero.jsx
-|  |  |- Skills.jsx
-|  |  |- Services.jsx
-|  |  |- Process.jsx
-|  |  |- Navbar.jsx
-|  |  |- Footer.jsx
-|  |  |- ...
-|  |- utils/
-|  |  |- portfolioContext.js       # Context builder for chat responses
-|  |- personalData.js              # Personal profile and social links
-|  |- projectsData.js              # Projects list and metadata
-|  |- App.jsx
-|  |- main.jsx
-|  |- index.css
-|- index.html
-|- vite.config.js                  # Includes local /api/chat middleware for dev
-|- package.json
+├── api/
+│   └── chat.js
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── screenshot/
+│   ├── components/
+│   │   ├── BotWidget.jsx
+│   │   ├── Contact.jsx
+│   │   ├── CredentialsPreview.jsx
+│   │   ├── Cursor.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── LoadingScreen.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Process.jsx
+│   │   ├── Profile.jsx
+│   │   ├── ProjectDetails.jsx
+│   │   ├── Projects.jsx
+│   │   ├── ScrollIndicator.jsx
+│   │   ├── Services.jsx
+│   │   ├── ServiceUnavailable.jsx
+│   │   └── Skills.jsx
+│   ├── utils/
+│   │   └── portfolioContext.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   ├── personalData.js
+│   └── projectsData.js
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+├── README.md
+└── vite.config.js
 ```
 
-## Getting Started
+---
+
+## ⚡ Quick Start
 
 ### Prerequisites
 
-- Node.js 18+
-- npm
+- **Node.js** 18+
+- **npm** (or compatible package manager)
 
-### Install
+### Installation
+
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/vaibhav5860/portfolio.git
 cd portfolio
+```
+
+2. **Install dependencies**
+
+```bash
 npm install
 ```
 
-### Environment Variables
+3. **Create environment variables**
 
-Create a .env file in the project root.
+Create a `.env` file in the project root.
 
-EmailJS (contact form):
+| Provider | Variables |
+| :--- | :--- |
+| **EmailJS** | `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY` |
+| **OpenRouter** | `OPENROUTER_API_KEY`, `OPENROUTER_MODEL`, `OPENROUTER_SITE_URL`, `OPENROUTER_SITE_NAME` |
+| **Groq** | `GROQ_API_KEY`, `GROQ_MODEL` |
+| **Gemini** | `GEMINI_API_KEY`, `GEMINI_MODEL` |
+| **OpenAI** | `OPENAI_API_KEY`, `OPENAI_MODEL` |
+
+Example:
 
 ```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
 
-AI provider keys (configure any one or more):
-
-```env
 OPENROUTER_API_KEY=your_openrouter_key
 OPENROUTER_MODEL=meta-llama/llama-3.1-8b-instruct:free
 OPENROUTER_SITE_URL=http://localhost:5173
@@ -114,41 +171,85 @@ OPENAI_API_KEY=your_openai_key
 OPENAI_MODEL=gpt-4o-mini
 ```
 
-If no provider key is available, the API returns a retrieval-based fallback summary from local portfolio context.
-
-### Run
+4. **Run the development server**
 
 ```bash
 npm run dev
 ```
 
-Open http://localhost:5173
+5. **Open in browser**
 
-## Scripts
+```text
+http://localhost:5173
+```
 
-- npm run dev: Start local development server
-- npm run build: Build production bundle
-- npm run preview: Preview production build
-- npm run lint: Run ESLint checks
+---
 
-## Customization Guide
+## 📜 Available Scripts
 
-- Update profile and social links in src/personalData.js
-- Update project cards/details in src/projectsData.js
-- Update chatbot UI text and quick hints in src/components/BotWidget.jsx
-- Update chat context behavior in src/utils/portfolioContext.js and api/chat.js
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Start development server with HMR |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint checks |
 
-## Deployment Notes
+---
 
-- Designed for Vercel-style API routes via api/chat.js
-- Local development also supports /api/chat through middleware configured in vite.config.js
+## 🎨 Customization
 
-## Contact
+### Update Personal Content
 
-- GitHub: https://github.com/vaibhav5860
-- LinkedIn: https://linkedin.com/in/vaibhav5860
-- Email: mailto:vaibhav.work5860@gmail.com
+- Edit profile and social links in `src/personalData.js`
+- Edit project details in `src/projectsData.js`
+- Update AI quick hints and fallback reply in `src/components/BotWidget.jsx`
+- Refine chat context logic in `src/utils/portfolioContext.js`
 
-## License
+### Work Section CTA
 
-This repository currently has no explicit license file. Add one if you want to define reuse terms.
+The Work section includes a dedicated button that links to GitHub for viewing all projects.
+
+---
+
+## 📱 Main Sections
+
+| Section | Description |
+| :--- | :--- |
+| **Hero** | Intro banner with role and primary actions |
+| **Skills** | Categorized technical and soft skills |
+| **Projects (Work)** | Project cards and detail routes with GitHub CTA |
+| **Services** | Service offerings and value proposition |
+| **Process** | Workflow and approach summary |
+| **Credentials** | Education and certificates preview |
+| **Contact** | EmailJS contact form and direct channels |
+| **AI Agent** | Chatbot for portfolio Q&A and guided navigation |
+
+---
+
+## 🤝 Connect With Me
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vaibhav5860)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vaibhav5860)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vaibhav.work5860@gmail.com)
+[![Twitter/X](https://img.shields.io/badge/Twitter%2FX-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Vaibhav5860)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/vaibhavraj23076)
+
+</div>
+
+---
+
+## 📄 License
+
+No license file is currently included in this repository.
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you found it helpful!**
+
+Made with ❤️ by [Vaibhav Raj](https://github.com/vaibhav5860)
+
+</div>
