@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     id: "02",
-    title: "Meme Lab 🤣",
+    title: "The Meme Lab 🤣",
     subtitle: "Meme Creation and Sharing Platform",
     period: "January’26 – February’26",
     description: "A web app for watching, creating and sharing memes.",
@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     id: "04",
-    title: "NexusOpenChat",
+    title: "Nexus OpenChat",
     subtitle: "Random Chat & Video Call Platform",
     period: "March'26",
     description: "A real-time web app to chat and video call with random people worldwide.",
