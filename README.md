@@ -165,7 +165,7 @@ GROQ_API_KEY=your_groq_key
 GROQ_MODEL=llama-3.1-8b-instant
 
 GEMINI_API_KEY=your_gemini_key
-GEMINI_MODEL=gemini-2.0-flash
+GEMINI_MODEL=gemini-3-flash-preview
 
 OPENAI_API_KEY=your_openai_key
 OPENAI_MODEL=gpt-4o-mini
