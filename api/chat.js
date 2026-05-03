@@ -214,6 +214,7 @@ const callGemini = async ({ message, history, contextText, env }) => {
 
   const modelCandidates = [
     env.GEMINI_MODEL,
+    'gemini-3-flash-preview',
     'gemini-2.0-flash',
     'gemini-2.0-flash-001',
     'gemini-flash-latest'
